@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 import os
 import discord
 from discord.ext import commands
+from Commands.free_games import setup_free_games_commands
 from random import randint
 from discord import DMChannel
 from discord.message import Message
@@ -94,7 +95,10 @@ async def clear_dm(ctx, amount: int):
         await ctx.send("✅ Bot's messages cleared!, I can't clear yours as it is Forbidden", delete_after=5)
     else:
         await ctx.send("❌ This command can only be used in DMs.", delete_after=5)
-        
+
+# Register commands
+setup_free_games_commands(bot)
+
 @bot.event
 async def on_ready():
     print(f"{bot.user} is now running!")
