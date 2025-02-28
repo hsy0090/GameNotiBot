@@ -6,7 +6,7 @@ A simple discord bot using python that mainly features getting free game news fr
 
 Create a .env file 
 ```
-DISCORD_TOKEN= [Your own discord bot Generated Token]
+DISCORD_TOKEN=[Your own discord bot Generated Token]
 ```
 
 ## Language
